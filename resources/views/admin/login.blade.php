@@ -24,17 +24,18 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('admin.login.store') }}" class="space-y-4">
+                <form method="POST" action="{{ route('admin.login.store') }}" class="space-y-4" autocomplete="off">
                     @csrf
                     <div>
                         <label class="mb-2 block text-sm font-medium text-slate-300">Email</label>
                         <input
                             type="email"
                             name="email"
-                            value="{{ old('email') }}"
                             required
+                            autocomplete="off"
+                            spellcheck="false"
+                            autocapitalize="off"
                             class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500 focus:border-cyan-300/40"
-                            placeholder="admin@aldera-saddatech.test"
                         >
                     </div>
                     <div>
@@ -43,8 +44,8 @@
                             type="password"
                             name="password"
                             required
+                            autocomplete="off"
                             class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500 focus:border-cyan-300/40"
-                            placeholder="••••••••"
                         >
                     </div>
                     <label class="flex items-center gap-2 text-sm text-slate-400">
