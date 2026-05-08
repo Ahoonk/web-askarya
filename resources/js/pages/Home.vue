@@ -159,11 +159,6 @@ const closeMobileMenu = () => {
         <main class="relative mx-auto max-w-7xl px-4 pb-20 pt-28 sm:px-6 lg:px-8 lg:pt-32">
             <section class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div class="space-y-8" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
-                        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                        Company profile perusahaan IT modern berbasis Laravel, Inertia, Vue, dan Tailwind
-                    </div>
-
                     <div class="space-y-6">
                         <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">
                             {{ site.tagline || 'Build faster. Operate smarter.' }}
