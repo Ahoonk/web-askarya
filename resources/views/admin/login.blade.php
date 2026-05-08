@@ -56,11 +56,6 @@
                     </button>
                 </form>
 
-                <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/60 p-4 text-sm text-slate-400">
-                    Demo login:
-                    <div class="mt-2 text-slate-200">admin@aldera-saddatech.test</div>
-                    <div class="text-slate-200">Admin12345!</div>
-                </div>
             </div>
         </div>
     </body>
