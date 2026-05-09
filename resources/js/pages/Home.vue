@@ -407,15 +407,9 @@ const closeMobileMenu = () => {
                             </div>
                             <div class="border-t border-white/10 bg-slate-950/80 p-4 sm:p-5">
                                 <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                                    <div class="min-w-0 space-y-2">
-                                        <div class="inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-100">
-                                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                                            Alamat perusahaan
-                                        </div>
-                                        <p class="text-sm leading-6 text-slate-200 sm:text-base sm:leading-7">
-                                            {{ site.company_address }}
-                                        </p>
-                                    </div>
+                                    <p class="min-w-0 text-sm leading-6 text-slate-200 sm:text-base sm:leading-7">
+                                        {{ site.company_address }}
+                                    </p>
                                     <a
                                         :href="mapLink(site.company_address)"
                                         target="_blank"
