@@ -82,6 +82,18 @@ class SettingController extends Controller
             $data = array_merge($data, $this->buildSyncedSeoData($data));
         }
 
+        logger()->info('admin settings upload debug', [
+            'has_files' => array_keys($request->allFiles()),
+            'has_doc_1' => $request->hasFile('documentation_image_1'),
+            'has_doc_2' => $request->hasFile('documentation_image_2'),
+            'has_doc_3' => $request->hasFile('documentation_image_3'),
+            'has_doc_4' => $request->hasFile('documentation_image_4'),
+            'doc_1_name' => $request->file('documentation_image_1')?->getClientOriginalName(),
+            'doc_2_name' => $request->file('documentation_image_2')?->getClientOriginalName(),
+            'doc_3_name' => $request->file('documentation_image_3')?->getClientOriginalName(),
+            'doc_4_name' => $request->file('documentation_image_4')?->getClientOriginalName(),
+        ]);
+
         $setting->fill([
             'company_name' => $data['company_name'],
             'home_seo_title' => $data['home_seo_title'],
