@@ -54,9 +54,9 @@ class HomeController extends Controller
             'products' => Product::query()->orderBy('sort_order')->get(),
             'pageLinks' => $this->pageLinks($site),
             'stats' => [
-                ['value' => '12+', 'label' => 'tahun pengalaman tim'],
-                ['value' => '80+', 'label' => 'proyek digital terselesaikan'],
-                ['value' => '35+', 'label' => 'client aktif dan partner'],
+                ['value' => '5+', 'label' => 'tahun pengalaman tim'],
+                ['value' => '20+', 'label' => 'proyek digital terselesaikan'],
+                ['value' => '10+', 'label' => 'client aktif'],
                 ['value' => '24/7', 'label' => 'dukungan operasional'],
             ],
         ]);

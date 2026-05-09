@@ -187,16 +187,16 @@ const closeMobileMenu = () => {
                         </a>
                     </div>
 
-                    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                    <div class="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
                         <div
                             v-for="(stat, index) in stats"
                             :key="stat.label"
-                            class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl shadow-slate-950/30 backdrop-blur"
+                            class="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl shadow-slate-950/30 backdrop-blur sm:p-5"
                             data-aos="zoom-in"
                             :data-aos-delay="index * 80"
                         >
-                            <p class="font-display text-3xl font-bold text-white">{{ stat.value }}</p>
-                            <p class="mt-2 text-sm leading-6 text-slate-400">{{ stat.label }}</p>
+                            <p class="font-display text-2xl font-bold text-white sm:text-3xl">{{ stat.value }}</p>
+                            <p class="mt-2 text-xs leading-5 text-slate-400 sm:text-sm sm:leading-6">{{ stat.label }}</p>
                         </div>
                     </div>
                 </div>
