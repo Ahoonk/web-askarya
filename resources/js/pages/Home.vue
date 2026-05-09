@@ -266,8 +266,7 @@ const closeMobileMenu = () => {
 
             <section id="visi-misi" class="scroll-mt-28 pt-24">
                 <div class="mb-10 flex flex-col gap-4" data-aos="fade-up">
-                    <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">Visi Misi</p>
-                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Arah yang jelas untuk hasil yang konsisten.</h2>
+                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Visi & Misi Perusahaan</h2>
                 </div>
 
                 <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -308,11 +307,9 @@ const closeMobileMenu = () => {
 
             <section id="client" class="scroll-mt-28 pt-24">
                 <div class="mb-10 flex flex-col gap-4" data-aos="fade-up">
-                    <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">Client Perusahaan</p>
-                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Dipercaya oleh berbagai sektor bisnis.</h2>
-                    <p class="max-w-3xl text-lg leading-8 text-slate-300">
-                        Daftar di bawah ini bisa dikelola dari admin, termasuk gambar client.
-                    </p>
+                    <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">Mitra Bisnis</p>
+                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Mitra Bisnis</h2>
+                    <p class="max-w-3xl text-lg leading-8 text-slate-300">Daftar Rekanan Perusahaan</p>
                 </div>
 
                 <div class="relative overflow-hidden">
@@ -354,7 +351,7 @@ const closeMobileMenu = () => {
             <section id="produk" class="scroll-mt-28 pt-24">
                 <div class="mb-10 flex flex-col gap-4" data-aos="fade-up">
                     <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">Produk Perusahaan</p>
-                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Portofolio layanan yang relevan untuk bisnis modern.</h2>
+                    <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Portofolio Layanan Produk Kami</h2>
                 </div>
 
                 <div class="relative overflow-hidden">
