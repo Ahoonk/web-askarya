@@ -204,21 +204,27 @@ const closeMobileMenu = () => {
                         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">{{ site.vision_title || 'Visi' }}</p>
                         <p class="mt-5 font-display text-2xl font-bold leading-relaxed text-white">{{ site.vision_description }}</p>
                     </div>
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div
-                            v-for="(mission, index) in site.mission_items || []"
-                            :key="mission"
-                            class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-slate-950/20 backdrop-blur"
-                            data-aos="fade-up"
-                            :data-aos-delay="index * 90"
-                        >
+                    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur">
+                        <div class="mb-5 inline-flex w-full items-center justify-between gap-4 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-5 py-3">
                             <div class="flex items-center gap-3">
-                                <span class="grid h-9 w-9 place-items-center rounded-full bg-white/10 font-display text-sm font-bold text-cyan-200">
-                                    0{{ index + 1 }}
-                                </span>
-                                <p class="font-semibold text-white">Misi {{ index + 1 }}</p>
+                                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                                <p class="font-display text-sm font-semibold uppercase tracking-[0.35em] text-cyan-100">Misi</p>
                             </div>
-                            <p class="mt-4 text-sm leading-7 text-slate-300">{{ mission }}</p>
+                            <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-cyan-100/70 sm:text-xs">
+                                {{ (site.mission_items || []).length || 0 }} poin
+                            </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div
+                                v-for="(mission, index) in site.mission_items || []"
+                                :key="mission"
+                                class="rounded-[1.5rem] border border-white/10 bg-slate-950/50 p-5 shadow-lg shadow-slate-950/10 backdrop-blur"
+                                data-aos="fade-up"
+                                :data-aos-delay="index * 90"
+                            >
+                                <p class="text-sm leading-7 text-slate-300">{{ mission }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
