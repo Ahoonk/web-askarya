@@ -314,9 +314,8 @@ const closeMobileMenu = () => {
 
             <section id="client" class="scroll-mt-28 pt-24">
                 <div class="mb-10 flex flex-col gap-4" data-aos="fade-up">
-                    <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">Mitra Bisnis</p>
                     <h2 class="font-display text-4xl font-bold text-white sm:text-5xl">Mitra Bisnis</h2>
-                    <p class="max-w-3xl text-lg leading-8 text-slate-300">Daftar Rekanan Perusahaan</p>
+                    <p class="max-w-3xl text-lg leading-8 text-slate-300">Daftar Client Perusahaan</p>
                 </div>
 
                 <div class="relative overflow-hidden">
