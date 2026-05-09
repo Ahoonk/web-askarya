@@ -228,7 +228,7 @@ const closeMobileMenu = () => {
                                     <span v-else class="font-display text-lg font-bold tracking-tight text-cyan-200">NT</span>
                                 </div>
                                 <div class="min-w-0">
-                                    <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Company Badge</p>
+                                    <p class="text-xs uppercase tracking-[0.35em] text-slate-500">ASKA</p>
                                     <p class="mt-2 font-display text-lg font-bold uppercase tracking-wide text-white sm:text-xl">
                                         PT ALDERA SADDATECH KARYA
                                     </p>
@@ -271,9 +271,6 @@ const closeMobileMenu = () => {
                                     </div>
                                 </div>
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent"></div>
-                                <div class="absolute left-3 bottom-3 rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-cyan-100 backdrop-blur">
-                                    {{ String(index + 1).padStart(2, '0') }}
-                                </div>
                             </div>
                         </div>
                     </div>
