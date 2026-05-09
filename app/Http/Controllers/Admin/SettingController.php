@@ -60,6 +60,10 @@ class SettingController extends Controller
             'company_address' => ['nullable', 'string', 'max:500'],
             'logo_image' => ['nullable', 'image', 'max:2048'],
             'hero_image' => ['nullable', 'image', 'max:4096'],
+            'documentation_image_1' => ['nullable', 'image', 'max:4096'],
+            'documentation_image_2' => ['nullable', 'image', 'max:4096'],
+            'documentation_image_3' => ['nullable', 'image', 'max:4096'],
+            'documentation_image_4' => ['nullable', 'image', 'max:4096'],
         ]);
 
         $slugs = [
@@ -117,6 +121,10 @@ class SettingController extends Controller
 
         $this->storeImage($request, $setting, 'logo_image', 'logo_image_path');
         $this->storeImage($request, $setting, 'hero_image', 'hero_image_path');
+        $this->storeImage($request, $setting, 'documentation_image_1', 'documentation_image_1_path');
+        $this->storeImage($request, $setting, 'documentation_image_2', 'documentation_image_2_path');
+        $this->storeImage($request, $setting, 'documentation_image_3', 'documentation_image_3_path');
+        $this->storeImage($request, $setting, 'documentation_image_4', 'documentation_image_4_path');
 
         $setting->save();
 

@@ -26,6 +26,7 @@ const { site, clients, products, stats, pageLinks } = defineProps({
 });
 
 const missions = site.mission_items ?? [];
+const documentationImages = computed(() => Array.from({ length: 4 }, (_, index) => site.documentation_images?.[index] ?? null));
 const buildMapSrc = (address) => (address ? `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed` : '');
 const mapLink = (address) => (address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}` : '');
 const clientRail = computed(() => [...(clients ?? []), ...(clients ?? [])]);
@@ -242,24 +243,30 @@ const closeMobileMenu = () => {
                     </div>
 
                     <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur" data-aos="fade-left" data-aos-delay="100">
-                        <div class="grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-3xl bg-slate-950/70 p-5 ring-1 ring-white/10">
-                                <p class="text-sm font-semibold text-cyan-200">Fokus layanan</p>
-                                <p class="mt-3 text-sm leading-7 text-slate-300">
-                                    Website company profile, sistem internal, dashboard operasional, integrasi API, dan layanan maintenance.
-                                </p>
-                            </div>
-                            <div class="rounded-3xl bg-slate-950/70 p-5 ring-1 ring-white/10">
-                                <p class="text-sm font-semibold text-cyan-200">Cara kerja</p>
-                                <p class="mt-3 text-sm leading-7 text-slate-300">
-                                    Discovery, desain, development, QA, deployment, lalu continuous improvement.
-                                </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                v-for="(image, index) in documentationImages"
+                                :key="index"
+                                class="group relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/70 shadow-lg shadow-slate-950/10"
+                            >
+                                <img
+                                    v-if="image"
+                                    :src="image"
+                                    :alt="`Dokumentasi ${index + 1}`"
+                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                />
+                                <div v-else class="grid h-full place-items-center p-4 text-center text-slate-400">
+                                    <div>
+                                        <p class="text-[10px] uppercase tracking-[0.35em] text-slate-500">Dokumentasi {{ index + 1 }}</p>
+                                        <p class="mt-2 text-sm leading-6">Isi dari admin</p>
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent"></div>
+                                <div class="absolute left-3 bottom-3 rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-cyan-100 backdrop-blur">
+                                    {{ String(index + 1).padStart(2, '0') }}
+                                </div>
                             </div>
                         </div>
-
-                        <p class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
-                            Bagian ini bisa diperbarui dari halaman admin, termasuk teks yang muncul di homepage.
-                        </p>
                     </div>
                 </div>
             </section>

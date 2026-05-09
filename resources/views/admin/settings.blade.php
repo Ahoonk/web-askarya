@@ -4,6 +4,7 @@
     @php
         $missionText = old('mission_items', implode(PHP_EOL, $setting->mission_items ?? []));
         $companyAddress = old('company_address', $setting->company_address ?? '');
+        $documentationImages = $setting->documentation_images ?? [];
     @endphp
 
     <div class="space-y-6">
@@ -49,7 +50,7 @@
                 </div>
 
                 <div class="rounded-[1.75rem] border border-white/10 bg-slate-900/70 p-6">
-                    <h2 class="font-display text-2xl font-bold text-white">Images & Location</h2>
+                    <h2 class="font-display text-2xl font-bold text-white">Images, Documentation & Location</h2>
                     <div class="mt-5 space-y-4">
                         <div>
                             <label class="mb-2 block text-sm text-slate-300">Logo image</label>
@@ -66,6 +67,25 @@
                             @if (!empty($setting->hero_image_url))
                                 <img src="{{ $setting->hero_image_url }}" class="mt-3 h-40 w-full rounded-2xl object-cover" alt="Hero preview">
                             @endif
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-sm text-slate-300">Documentation photos</label>
+                            <div class="grid gap-4 sm:grid-cols-2">
+                                @foreach ([1, 2, 3, 4] as $index)
+                                    @php
+                                        $docInput = 'documentation_image_' . $index;
+                                        $docPreview = $documentationImages[$index - 1] ?? null;
+                                    @endphp
+                                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+                                        <label class="mb-2 block text-xs uppercase tracking-[0.3em] text-slate-500">Photo {{ $index }}</label>
+                                        <input type="file" name="{{ $docInput }}" accept="image/*" class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-white file:mr-4 file:rounded-full file:border-0 file:bg-cyan-400 file:px-4 file:py-2 file:font-bold file:text-slate-950">
+                                        @if (!empty($docPreview))
+                                            <img src="{{ $docPreview }}" class="mt-3 h-28 w-full rounded-2xl object-cover" alt="Documentation preview {{ $index }}">
+                                        @endif
+                                    </div>
+                                @endforeach
+                            </div>
+                            <p class="mt-2 text-xs text-slate-500">Foto ini akan tampil sebagai dokumentasi 2x2 di homepage.</p>
                         </div>
                         <div>
                             <label class="mb-2 block text-sm text-slate-300">Location preview</label>

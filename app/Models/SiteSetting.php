@@ -44,6 +44,10 @@ class SiteSetting extends Model
         'logo_image_path',
         'hero_image_path',
         'about_image_path',
+        'documentation_image_1_path',
+        'documentation_image_2_path',
+        'documentation_image_3_path',
+        'documentation_image_4_path',
     ];
 
     protected function casts(): array
@@ -57,6 +61,7 @@ class SiteSetting extends Model
         'logo_image_url',
         'hero_image_url',
         'about_image_url',
+        'documentation_images',
     ];
 
     protected function logoImageUrl(): Attribute
@@ -72,5 +77,15 @@ class SiteSetting extends Model
     protected function aboutImageUrl(): Attribute
     {
         return Attribute::get(fn () => $this->about_image_path ? '/storage/' . ltrim($this->about_image_path, '/') : null);
+    }
+
+    protected function documentationImages(): Attribute
+    {
+        return Attribute::get(fn () => [
+            $this->documentation_image_1_path ? '/storage/' . ltrim($this->documentation_image_1_path, '/') : null,
+            $this->documentation_image_2_path ? '/storage/' . ltrim($this->documentation_image_2_path, '/') : null,
+            $this->documentation_image_3_path ? '/storage/' . ltrim($this->documentation_image_3_path, '/') : null,
+            $this->documentation_image_4_path ? '/storage/' . ltrim($this->documentation_image_4_path, '/') : null,
+        ]);
     }
 }
