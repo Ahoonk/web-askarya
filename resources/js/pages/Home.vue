@@ -216,14 +216,23 @@ const closeMobileMenu = () => {
                                 <p class="text-sm text-slate-400">Tambahkan gambar hero dari panel admin untuk mengganti tampilan ini.</p>
                             </div>
                         </div>
-                        <div class="grid gap-4 border-t border-white/10 p-6 sm:grid-cols-2">
-                            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                                <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Core Stack</p>
-                                <p class="mt-3 font-display text-lg font-semibold text-white">Laravel + Inertia + Vue</p>
-                            </div>
-                            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                                <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Design System</p>
-                                <p class="mt-3 font-display text-lg font-semibold text-white">Tailwind CSS</p>
+                        <div class="border-t border-white/10 p-6">
+                            <div class="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 shadow-lg shadow-slate-950/10">
+                                <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[1.25rem] border border-white/10 bg-white p-2">
+                                    <img
+                                        v-if="site.logo_image_url"
+                                        :src="site.logo_image_url"
+                                        :alt="site.company_name || 'Logo'"
+                                        class="h-full w-full object-contain"
+                                    />
+                                    <span v-else class="font-display text-lg font-bold tracking-tight text-cyan-200">NT</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Company Badge</p>
+                                    <p class="mt-2 font-display text-lg font-bold uppercase tracking-wide text-white sm:text-xl">
+                                        PT ALDERA SADDATECH KARYA
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
