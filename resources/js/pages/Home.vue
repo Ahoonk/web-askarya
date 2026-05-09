@@ -404,16 +404,15 @@ const closeMobileMenu = () => {
                                     title="Google Maps company location"
                                 ></iframe>
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent"></div>
-                                <div class="absolute left-3 top-3 hidden items-center gap-2 rounded-full border border-white/10 bg-slate-950/75 px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-100 backdrop-blur sm:left-4 sm:top-4 sm:inline-flex sm:px-3 sm:py-2 sm:text-xs">
-                                    <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                                    Lokasi Kantor
-                                </div>
                             </div>
-                            <div class="border-t border-white/10 bg-slate-950/80 p-3 sm:p-5">
-                                <div class="flex flex-col gap-2.5 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
-                                    <div class="min-w-0">
-                                        <p class="text-[10px] uppercase tracking-[0.25em] text-slate-500 sm:text-xs">Alamat perusahaan</p>
-                                        <p class="mt-1.5 text-sm leading-5 text-slate-200 sm:mt-2 sm:text-base sm:leading-6">
+                            <div class="border-t border-white/10 bg-slate-950/80 p-4 sm:p-5">
+                                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                    <div class="min-w-0 space-y-2">
+                                        <div class="inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-100">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                                            Alamat perusahaan
+                                        </div>
+                                        <p class="text-sm leading-6 text-slate-200 sm:text-base sm:leading-7">
                                             {{ site.company_address }}
                                         </p>
                                     </div>
@@ -421,7 +420,7 @@ const closeMobileMenu = () => {
                                         :href="mapLink(site.company_address)"
                                         target="_blank"
                                         rel="noreferrer"
-                                        class="inline-flex w-full shrink-0 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-[11px] font-bold text-cyan-100 transition hover:bg-cyan-400/20 hover:text-white sm:w-auto sm:px-4 sm:py-2 sm:text-xs"
+                                        class="inline-flex w-full shrink-0 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/20 hover:text-white sm:w-auto"
                                     >
                                         Buka di Google Maps
                                     </a>
