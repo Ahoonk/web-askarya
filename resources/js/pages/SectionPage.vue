@@ -141,7 +141,6 @@ const closeMobileMenu = () => {
         <main class="relative mx-auto max-w-7xl px-4 pb-20 pt-28 sm:px-6 lg:px-8 lg:pt-32">
             <section class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
                 <div class="space-y-6" data-aos="fade-right">
-                    <p class="font-display text-sm uppercase tracking-[0.35em] text-cyan-200/80">SEO Friendly Page</p>
                     <h1 class="font-display text-5xl font-bold leading-tight text-white sm:text-6xl">
                         {{ page.title }}
                     </h1>
