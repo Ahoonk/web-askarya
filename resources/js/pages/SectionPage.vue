@@ -163,21 +163,6 @@ const closeMobileMenu = () => {
                                 ></iframe>
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent"></div>
                             </div>
-                            <div class="border-t border-white/10 bg-slate-950/80 p-4 sm:p-5">
-                                <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                                    <p class="min-w-0 text-sm leading-6 text-slate-200 sm:text-base sm:leading-7">
-                                        {{ site.company_address }}
-                                    </p>
-                                    <a
-                                        :href="mapLink(site.company_address)"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        class="inline-flex w-full shrink-0 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/20 hover:text-white sm:w-auto"
-                                    >
-                                        Buka di Google Maps
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                         <div v-else class="grid h-64 place-items-center rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 text-center">
                             <div>
